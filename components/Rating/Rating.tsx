@@ -4,11 +4,13 @@ import StarIcon from './star.svg';
 import { RatingProps } from './Rating.props';
 import { useEffect, useState, KeyboardEvent } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const Rating = ({ isEditable = false, rating, setRating, className, ...props}: RatingProps): JSX.Element => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
     useEffect(() => {
         constructRating(rating);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rating]);
 
     const constructRating = (currentRating: number) => {
@@ -31,7 +33,7 @@ export const Rating = ({ isEditable = false, rating, setRating, className, ...pr
             );
         });
         setRatingArray(updatedArray);
-    }
+    };
 
     const changeDisplay = (i: number) => {
         if (!isEditable) {
@@ -52,7 +54,7 @@ export const Rating = ({ isEditable = false, rating, setRating, className, ...pr
             return;
         }
         setRating(i);
-    }
+    };
 
     return (
         <div {...props}>

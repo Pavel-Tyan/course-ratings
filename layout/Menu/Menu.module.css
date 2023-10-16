@@ -9,7 +9,7 @@
     margin-top: 20px;
 }
 
-.firstLevelActive, 
+.firstLevelActive,
 .firstLevel:hover {
     color: var(--primary);
 }
@@ -37,6 +37,14 @@
     padding-left: 32px;
 
     border-left: 1px solid #DFDFDF;
+}
+
+.secondLevelBlock {
+    display: none;
+}
+
+.secondLevelBlockOpened {
+    display: block;
 }
 
 .secondLevelBlockOpened:last-child {

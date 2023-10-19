@@ -3,7 +3,7 @@
 	grid-template: ". header header ." auto ". sidebar body ." 1fr "footer footer footer footer" auto / auto 230px minmax(320px, 1200px) auto;
 
 	min-height: 100vh;
-	gap: 0 30px;
+	gap: 40px 30px;
 }
 
 .header {
@@ -39,5 +39,9 @@
 
 	.header {
 		display: block;
+	}
+
+	.body {
+		padding: 15px;
 	}
 }

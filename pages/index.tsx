@@ -1,4 +1,4 @@
-import { P, Rating, Tag } from '@/components';
+import {Input, P, Rating, Tag, Textarea} from '@/components';
 import { Button } from '@/components/Button/Button';
 import { Htag } from '@/components/Htag/Htag';
 import { useState } from 'react';
@@ -25,6 +25,8 @@ function Home({ menu, firstCategory }: HomeProps): JSX.Element {
       <Tag size='s' color='green'>Green</Tag>
       <Tag size='s' color='primary'>Low</Tag>
       <Rating rating={rating}  isEditable setRating={setRating} />
+      <Input placeholder='тест'/>
+      <Textarea placeholder='тест'/>
     </>
   );
 }

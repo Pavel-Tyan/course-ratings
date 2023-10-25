@@ -12,7 +12,7 @@ export const Sort = ({sort, setSort, className, ...props}: SortProps): JSX.Eleme
                     [styles.active]: sort == SortEnum.Rating
                 })}
             >
-                <SortIcon className={styles.sortIcon} />По рейтинге
+                <SortIcon className={styles.sortIcon} />По рейтингу
             </span>
             <span
                 onClick={() => setSort(SortEnum.Price)}

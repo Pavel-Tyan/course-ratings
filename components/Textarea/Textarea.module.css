@@ -1,6 +1,6 @@
-.input {
+.textarea {
 	padding: 7px 15px;
-
+	width: 100%;
 	color: var(--black);
 	border: none;
 
@@ -15,11 +15,26 @@
 	line-height: 22px;
 }
 
-.input:focus {
+.textarea:focus {
 	outline-width: 2px;
 	outline-style: solid;
 }
 
-.input::placeholder{
+.textarea::placeholder{
 	color: var(--gray);
+}
+
+.error {
+	border: 2px solid var(--red);
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	color: var(--red);
+}
+
+.textareaWrapper {
+	position: relative;
 }

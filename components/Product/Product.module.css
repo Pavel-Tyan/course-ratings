@@ -153,20 +153,9 @@
 	border-bottom: 1px dashed var(--gray-light);
 }
 
-.closed {
-	overflow: hidden;
-
-	max-height: 0;
-	padding: 0;
-}
-
-.opened {
-	max-height: auto;
-	padding: 30px;
-}
-
 .reviews {
-    
+    overflow: hidden;
+	padding: 30px;
 }   
 
 @media screen and (width <= 1320px) {

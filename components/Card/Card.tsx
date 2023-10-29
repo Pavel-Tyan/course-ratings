@@ -8,7 +8,7 @@ export const Card = motion(
     forwardRef(
         (
             { color = 'white', children, className, ...props }: CardProps,
-            ref: ForwardRef<HTMLDivElement>,
+            ref: ForwardedRef<HTMLDivElement>,
         ): JSX.Element => {
             return (
                 <div

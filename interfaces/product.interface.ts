@@ -34,4 +34,3 @@ export interface ProductModel {
     advantages?: string;
     disadvantages?: string;
 }
-

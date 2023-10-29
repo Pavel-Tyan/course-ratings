@@ -1,55 +1,49 @@
 import React from 'react';
-import {GetStaticPaths, GetStaticProps, GetStaticPropsContext} from 'next';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import axios from 'axios';
 import { MenuItem } from '@/interfaces/menu.interface';
 import { withLayout } from '@/layout/Layout';
-import {firstLevelMenu} from "@/helpers/helpers";
-import {ParsedUrlQuery} from "querystring";
+import { firstLevelMenu } from '@/helpers/helpers';
+import { ParsedUrlQuery } from 'querystring';
 import { API } from '@/helpers/api';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Type({ firstCategory }: TypeProps): JSX.Element {
-
-    return (
-        <>
-            Type: {firstCategory}
-        </>
-    );
+    return <>Type: {firstCategory}</>;
 }
 
 export default withLayout(Type);
 
 export const getStaticPaths: GetStaticPaths = async () => {
     return {
-        paths: firstLevelMenu.map(m =>'/' + m.route),
+        paths: firstLevelMenu.map((m) => '/' + m.route),
         fallback: true,
     };
 };
 export const getStaticProps: GetStaticProps<TypeProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
     if (!params) {
         return {
-            notFound: true
+            notFound: true,
         };
     }
-    const firstCategoryItem = firstLevelMenu.find(m => m.route == params.type);
+    const firstCategoryItem = firstLevelMenu.find((m) => m.route == params.type);
     if (!firstCategoryItem) {
         return {
-            notFound: true
+            notFound: true,
         };
     }
     const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
-        firstCategory: firstCategoryItem.id
+        firstCategory: firstCategoryItem.id,
     });
     return {
         props: {
             menu,
-            firstCategory: firstCategoryItem.id
-        }
+            firstCategory: firstCategoryItem.id,
+        },
     };
 };
 
-interface TypeProps extends Record<string, unknown>{
+interface TypeProps extends Record<string, unknown> {
     menu: MenuItem[];
     firstCategory: number;
 }
-

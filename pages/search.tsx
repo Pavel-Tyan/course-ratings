@@ -7,12 +7,7 @@ import { API } from '@/helpers/api';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Search(): JSX.Element {
-
-    return (
-        <>
-            search
-        </>
-    );
+    return <>search</>;
 }
 
 export default withLayout(Search);
@@ -20,18 +15,17 @@ export default withLayout(Search);
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     const firstCategory = 0;
     const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
-        firstCategory
+        firstCategory,
     });
     return {
         props: {
             menu,
             firstCategory,
-        }
+        },
     };
 };
 
-interface HomeProps extends Record<string, unknown>{
+interface HomeProps extends Record<string, unknown> {
     menu: MenuItem[];
     firstCategory: number;
 }
-

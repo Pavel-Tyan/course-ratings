@@ -15,17 +15,12 @@ export const Up = (): JSX.Element => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
     };
 
     return (
-        <motion.button 
-            className={styles.up} 
-            onClick={scrollToTop}
-            animate={controls}
-            initial={{ opacity: 0 }}
-        >
+        <motion.button className={styles.up} onClick={scrollToTop} animate={controls} initial={{ opacity: 0 }}>
             <UpIcon />
         </motion.button>
     );

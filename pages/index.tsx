@@ -1,7 +1,3 @@
-import { Input, P, Rating, Tag, Textarea } from '@/components';
-import { Button } from '@/components/Button/Button';
-import { Htag } from '@/components/Htag/Htag';
-import { useState } from 'react';
 import { withLayout } from '../layout/Layout';
 import React from 'react';
 import { GetStaticProps } from 'next';

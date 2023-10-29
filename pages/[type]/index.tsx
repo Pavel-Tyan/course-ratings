@@ -17,7 +17,7 @@ export default withLayout(Type);
 export const getStaticPaths: GetStaticPaths = async () => {
     return {
         paths: firstLevelMenu.map((m) => '/' + m.route),
-        fallback: true,
+        fallback: false,
     };
 };
 export const getStaticProps: GetStaticProps<TypeProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {

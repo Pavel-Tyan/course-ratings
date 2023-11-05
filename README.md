@@ -2,6 +2,10 @@
 
 ![Alt text](img/screen.png)
 
+## Tools
+
+### React, Next.js, Axios, Framer motion, React hook form
+
 ## How to run project
 
 First, run the development server:

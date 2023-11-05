@@ -1,24 +1,22 @@
 .p {
-	color: #3B434E;
+    color: #3b434e;
 
-	font-family: "Noto Sans";
-	font-style: normal;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: 'Noto Sans';
+    font-style: normal;
 }
 
 .s {
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .m {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px; /* 150% */
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .l {
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 29px;
+    font-size: 18px;
+    font-weight: 400;
 }

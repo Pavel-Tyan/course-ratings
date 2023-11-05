@@ -1,1 +1,1 @@
-# Next.js App
+# Next.js App for course ratings

@@ -1,7 +1,5 @@
 # [Next.js](https://nextjs.org/) App (Page Router) for course ratings
 
-![Alt text](img/screen.png)
-
 ## Tools
 
 ### React, Next.js, Axios, Framer motion, React hook form
